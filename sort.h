@@ -9,14 +9,6 @@
 #include <string.h>
 
 
-
-/* prototypes */
-
-void print_array(const int *array, size_t size);
-void print_list(const listint_t *list);
-
-
-
 /* structs */
 
 /**
@@ -32,6 +24,16 @@ typedef struct listint_s
     struct listint_s *prev;
     struct listint_s *next;
 } listint_t;
+
+
+
+/* prototypes */
+
+void print_array(const int *array, size_t size);
+void print_list(const listint_t *list);
+int sorted_array(int *array, size_t size);
+int *swap_array(int *array, size_t position);
+void bubble_sort(int *array, size_t size);
 
 
 #endif /* SORT_H */
