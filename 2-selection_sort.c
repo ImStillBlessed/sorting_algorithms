@@ -49,5 +49,5 @@ int *swap(int *array, size_t a, size_t b)
 
 	array[a] = array[b];
 	array[b] = temp;
-	return array;
+	return (array);
 }
