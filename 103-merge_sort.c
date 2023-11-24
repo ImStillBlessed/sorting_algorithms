@@ -24,14 +24,20 @@ void merge_sort(int *array, size_t size)
  */
 void merge_sort_recursive(int *array, size_t size)
 {
+	size_t mid;
+	int *left;
+	size_t left_size;
+	int *right;
+	size_t right_size;
+
 	if (size < 2)
 		return;
 
-	size_t mid = size / 2;
-	int *left = array;
-	size_t left_size = mid;
-	int *right = array + mid;
-	size_t right_size = size - mid;
+	mid = (size / 2);
+	left = array;
+	left_size = mid;
+	right = array + mid;
+	right_size = size - mid;
 
 	merge_sort_recursive(left, left_size);
 	merge_sort_recursive(right, right_size);
