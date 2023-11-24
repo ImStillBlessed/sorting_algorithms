@@ -1,4 +1,5 @@
 #include "sort.h"
+void swap_nodes(listint_t **list, listint_t *node1, listint_t *node2);
 
 /**
  * cocktail_sort_list - Sorts a doubly linked list of integers in ascending order
@@ -28,8 +29,7 @@ void cocktail_sort_list(listint_t **list)
 		if (swapped == 0)
 			break;
 
-		swapped = 0;
-		for (; current->prev != NULL; current = current->prev)
+		for (current = current->prev; current != NULL; current = current->prev)
 		{
 			if (current->n < current->prev->n)
 			{
@@ -60,5 +60,9 @@ void swap_nodes(listint_t **list, listint_t *node1, listint_t *node2)
 	node1->next = node2->next;
 	node2->prev = node1->prev;
 	node1->prev = node2;
+	
+	if (node1->next != NULL)
+		node1->next->prev = node1;
+
 	node2->next = node1;
 }

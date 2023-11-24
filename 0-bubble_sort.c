@@ -28,7 +28,7 @@ void bubble_sort(int *array, size_t size)
 }
 
 /**
- * swap - swaps positions of two numbers in an array
+ * swap_array - swaps positions of two numbers in an array
  * @array: the array
  * @position: the position of the number
  * Return: a new swaped array
