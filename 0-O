@@ -1,3 +1,8 @@
 O(1)
+<<<<<<< HEAD
 O(n)
 O(n)
+=======
+O(n^2)
+O(n^2)
+>>>>>>> beabd9e6370c3b6cbb5aba1aabd0e657075e098d
