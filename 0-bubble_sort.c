@@ -9,12 +9,11 @@
 
 void bubble_sort(int *array, size_t size)
 {
-	size_t i;
+	size_t i = 0;
 
-	i = 0;
 	while (1)
 	{
-		for (i = 0 ; i < size - 1 ; i++)
+		for (i = 0 ; i < size - 1 ; i ++)
 		{
 			if (array[i] > array[i + 1])
 			{
@@ -22,24 +21,24 @@ void bubble_sort(int *array, size_t size)
 				print_array(array, size);
 			}
 		}
+
 		if (sorted_array(array, size))
 			break;
 	}
 }
-
 /**
- * swap_array - swaps positions of two numbers in an array
+ * swap - swaps positions of two numbers in an array
  * @array: the array
- * @position: the position of the number
+ * @position: the positikn of the number
  * Return: a new swaped array
  */
 int *swap_array(int *array, size_t position)
 {
-	int temp = array[position];
+        int temp = array[position];
 
-	array[position] = array[position + 1];
-	array[position + 1] = temp;
-	return (array);
+        array[position] = array[position + 1];
+        array[position + 1] = temp;
+        return (array);
 }
 
 /**
@@ -51,12 +50,12 @@ int *swap_array(int *array, size_t position)
 
 int sorted_array(int *array, size_t size)
 {
-	size_t i;
+        size_t i;
 
-	for (i = 0 ; i < (size - 1) ; i++)
-	{
-		if (array[i] > array[i + 1])
-			return (0);
-	}
-	return (1);
+        for (i = 0 ; i < (size - 1) ; i++)
+        {
+                if (array[i] > array[i + 1])
+                        return (0);
+        }
+        return (1);
 }
